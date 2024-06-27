@@ -7,8 +7,9 @@ FROM python:3.12.1-slim
 WORKDIR /app
 
 # Set env variables
+# Mesa requires that Python is not buffering the output
 ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED 1  
 
 # Copy the current directory contents into the container at /app
 COPY . /app
