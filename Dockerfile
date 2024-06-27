@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Official docker image
-FROM python:3.11.1-slim
+FROM python:3.12.1-slim
 
 # Set the working directory in the container
 WORKDIR /app
@@ -21,6 +21,7 @@ RUN virtualenv venv
 
 # Activate the virtual environment and install dependencies
 RUN /bin/bash -c "source venv/bin/activate && pip install --no-cache-dir -r requirements.txt"
+
 
 # Run a default command or shell
 CMD ["/bin/bash"]
