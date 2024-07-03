@@ -1,0 +1,9 @@
+# docker-compose.yaml
+services:
+
+  test:
+    build: .
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["/venv/bin/python3 -m pytest > /code/model/tests/pytest_logs.txt"]
+    volumes:
+      - .:/code
