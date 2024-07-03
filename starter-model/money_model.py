@@ -21,9 +21,16 @@ class MoneyAgent(mesa.Agent):
         self.wealth = 1
     
     def step(self):
-        # The agent's step will go here.
         # For demonstration purposes we will print the agent's unique_id
         print(f"Hi, I am an agent, you can call me {str(self.unique_id)}.")
+
+        # Verify whether the agent has any wealth
+        if self.wealth > 0:
+            other_agent = self.random.choice(self.model.schedule.agents)
+            if other_agent is not None:
+                other_agent.wealth += 1
+                self.wealth -= 1
+
 
 class MoneyModel(mesa.Model):
     """A model with some number of agents."""
