@@ -1,29 +1,27 @@
-# Dockerfile
+# Ubuntu Docker Image with Python 3.8
+FROM ubuntu:20.04
 
-# Official docker image
-FROM python:3.12.1-slim
+# Set work directory
+WORKDIR /code
 
-# Set the working directory in the container
-WORKDIR /app
-
-# Set env variables
-# Mesa requires that Python is not buffering the output
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1  
-
-# Copy the current directory contents into the container at /app
-COPY . /app
+# Install Python 3 and pip
+RUN apt-get update && apt-get install -y python3 python3-pip
 
 # Install virtualenv
 RUN pip install --no-cache-dir virtualenv
 
-# Create a virtual environment in the specified directory
-RUN virtualenv venv
+# Create a virtual environment in the /venv directory
+RUN virtualenv /venv
 
-# Activate the virtual environment and install dependencies
-RUN /bin/bash -c "source venv/bin/activate && pip install --no-cache-dir -r requirements.txt"
+# Install dependencies
+COPY requirements.txt /code/requirements.txt
+RUN /venv/bin/python -m pip install --upgrade pip
+RUN /venv/bin/pip install --no-cache-dir -r requirements.txt
 
+# Add the virtual environment to PATH & set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PATH="/venv/bin:$PATH"
 
-# Run a default command or shell
-CMD ["/bin/bash"]
-
+# Copy project files
+COPY model /code/model
