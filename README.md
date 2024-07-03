@@ -1,5 +1,5 @@
 # ABM-Mesa-Demo
-Basic demo of creating Agent Based Models using the Mesa framework and Python.
+Basic demo for creating Agent Based Models using the Mesa framework and Python.
 
 
 ### Build and Run the Docker Virtual Env Container
