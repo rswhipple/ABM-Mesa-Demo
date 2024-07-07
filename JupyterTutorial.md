@@ -8,7 +8,7 @@ To use Jupyter Notebooks in VS Code, follow these steps:
 
 2. **Install Python Extension**: Install the Python extension for VS Code from the Extensions marketplace.
 
-3. **Install Jupyter Extension**: Install the Jupyter extension for VS Code from the Extensions marketplace.
+3. **Install Jupyter Extension**: Install the Jupyter and Jupyterlab-Browser extensions for VS Code from the Extensions marketplace.
 
 4. **Open Jupyter Notebook**:
    - Open VS Code and navigate to your project directory.
