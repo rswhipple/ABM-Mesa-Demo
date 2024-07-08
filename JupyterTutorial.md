@@ -118,6 +118,3 @@ Leverage the advanced features of JupyterLab:
 - **File Browser**: Easily navigate and manage files in your workspace.
 - **Tabbed Interface**: Open multiple notebooks and files in separate tabs for easy switching.
 - **Extensions**: Enhance functionality with JupyterLab extensions available in the JupyterLab extension manager.
-
-By following these best practices, you can create organized, readable, and reproducible Jupyter Notebooks that effectively communicate your data science work.
-```
