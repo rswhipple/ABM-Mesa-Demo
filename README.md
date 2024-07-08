@@ -9,11 +9,16 @@ Basic demo for creating Agent Based Models using the Mesa framework and Python.
 
 ## Installation
 
-1. **Build the Docker Image & Run the API**:
+1. **Clone Repo and Change Directories**:
+   ```bash
+   git clone <this_repo>
+   cd  this_repo/demo_model
+    ```
+2. **Build the Docker Image & Run the API**:
    ```bash
    docker-compose up -d
     ```
-2. **Run Testing suite**:
+3. **Run Testing suite**:
    ```bash
    docker-compose run test  
    ```
