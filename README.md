@@ -18,7 +18,7 @@ Basic demo for creating Agent Based Models using the Mesa framework and Python.
    ```bash
    docker-compose up -d
     ```
-3. **Run Testing suite**:
+3. **Run Testing Suite**:
    ```bash
    docker-compose run test  
    ```
