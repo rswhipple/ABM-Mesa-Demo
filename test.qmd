@@ -1,0 +1,18 @@
+---
+title: "test document"
+format: html
+editor: visual
+---
+
+In this document, we are practicing how to make a quarto book.
+
+We will describe the data and include file locations.
+
+In this section I use data from [test.xlsx](https://github.com/FoodSystemsModeling/CityFoodPolicy/tree/main/data_raw).
+
+We need to figure out if we link to the folder or to the file directly, which is more helpful?
+
+Things to include in the written description, think about it like the data and methods section of the paper (including detailed footnotes): 
+  - any changes to the data (e.g., if you dropped outliers, then describe the process by which outliers were identified and how many observations were dropped)
+  - 
+  - 
